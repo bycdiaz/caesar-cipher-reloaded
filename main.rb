@@ -7,10 +7,9 @@ before do
 end
 
 def set_title
-  @title
+  @title = "Caesar Cipher"
 end
 
 get '/' do
-  @title = "Welcome!"
   erb :index
 end
