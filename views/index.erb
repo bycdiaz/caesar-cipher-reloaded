@@ -7,16 +7,21 @@
     <title><%= @title %></title>
   </head>
   <body>
-
-    <div>
+    
+    <div id="form">
       <h1>Caesar Cipher</h1>
-        <form>
-           Enter word:
+        <form action="/" method="POST">
+          <label for="word">Enter word:</label>
           <input type="text" name="word">
-          Enter Shift Factor:
+          <label for="shift">Enter Shift Factor:</label>
           <input type="text" name="shift">
           <input type="submit" value="Submit">
         </form>
     </div>
+    <% if @result %>
+      <div id="output">
+        <p>The result is: <%= @result %>.</p>  
+      </div>
+    <% end%>
   </body>
 </html>
